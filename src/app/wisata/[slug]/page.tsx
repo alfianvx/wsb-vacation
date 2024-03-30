@@ -15,12 +15,12 @@ export default function Page({ params }: { params: { slug: string } }) {
             <h1>{params.slug}</h1>
             <div className="flex items-center space-x-1">
               <IconTicket className="w-4" />
-              <span className="text-xs">Rp. 20.000 / orang</span>
+              <span className="text-xs">Rp. 10.000 / orang</span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <IconLocation />
-            <p>Curug Sikarim, Garung.</p>
+            <p>Garung.</p>
           </div>
         </div>
         <div className="flex items-center mb-5 space-x-2">
