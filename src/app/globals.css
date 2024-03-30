@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.slick-center {
-  transform: scale(1.1);
+/* STYLE FOR CENTER MODE REACT SLICK */
+/* .slick-center:hover {
+  transform: scale(1);
   transition: cubic-bezier(0, 0.99, 0.98, 0.01);
-  z-index: 10;
-}
+} */
 
+/* CENTER OBJECT WHEN CENTER MODE TRUE */
 .slick-slide > div {
   display: grid;
   place-items: center;
-  margin: auto;
+  margin: auto 5px;
   padding: 0px;
 }
