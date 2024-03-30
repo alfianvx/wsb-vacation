@@ -1,8 +1,9 @@
 import {
+  IconCircleInfo,
+  IconCircleInfoFill,
   IconHome,
   IconHomeFill,
   IconPerson,
-  IconPersonFill,
   IconSearch,
   IconSearchFill,
 } from "@irsyadadl/paranoid";
@@ -20,9 +21,9 @@ const navlinks = [
     url: "/search",
   },
   {
-    icon: IconPerson,
-    icon_active: IconPersonFill,
-    url: "/profile",
+    icon: IconCircleInfo,
+    icon_active: IconCircleInfoFill,
+    url: "/about",
   },
 ];
 
