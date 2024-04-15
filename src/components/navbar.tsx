@@ -1,13 +1,15 @@
+"use client";
+
 import {
   IconCircleInfo,
   IconCircleInfoFill,
   IconHome,
   IconHomeFill,
-  IconPerson,
   IconSearch,
   IconSearchFill,
 } from "@irsyadadl/paranoid";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navlinks = [
   {
@@ -28,11 +30,12 @@ const navlinks = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   return (
     <nav className="fixed left-0 right-0 z-50 flex items-center justify-center px-6 py-4 m-auto space-x-10 border rounded-lg backdrop-blur bottom-3 max-w-max">
       {navlinks.map((link) => (
-        <Link className="" href={link.url} key={link.url}>
-          <link.icon />
+        <Link href={link.url} key={link.url}>
+          {pathname === link.url ? <link.icon_active /> : <link.icon />}
         </Link>
       ))}
     </nav>
