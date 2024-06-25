@@ -5,14 +5,14 @@ import ImageSlider from "@/components/templates/image-slider";
 export default async function DetailPlace({ slug }: { slug: string }) {
   const place = await getPlaceById(slug);
   return (
-    <main className="h-screen max-w-6xl px-1 mx-auto overflow-hidden">
+    <main className="min-h-screen max-w-6xl px-1 mx-auto">
       <ImageSlider gambar={place.gambar} />
-      <div className="px-4 pt-4 pb-20">
+      <div className="px-4 pt-10 pb-20">
         <div className="mb-5">
           <h1 className="mb-3 text-xl font-bold">{place.nama}</h1>
           <div className="flex items-center space-x-2">
             <IconLocation />
-            <p>{place.alamat}</p>
+            <p className="text-sm">{place.alamat}</p>
           </div>
         </div>
         <div className="flex items-center mb-5 space-x-2">
@@ -30,7 +30,7 @@ export default async function DetailPlace({ slug }: { slug: string }) {
               <IconClock />
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm font-semibold">Jam Operasional</p>
+              <p className="text-sm font-semibold">Jam Buka</p>
               <span className="text-xs">{place.jam_operasional}</span>
             </div>
           </div>
